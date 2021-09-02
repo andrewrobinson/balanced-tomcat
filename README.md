@@ -8,6 +8,18 @@ Branches achieve various goals on the way to that
 ## Running
 
 
+### Multistage
+
+```
+
+docker build -v maven-repo:/root/.m2 -t andrewmcrobinson/runner-jre-jar .
+
+docker run -it andrewmcrobinson/runner-jre-jar
+
+
+```
+
+
 ### Build using maven on docker
 
 ```bash
@@ -30,7 +42,7 @@ java -jar target/session-servlet-1.0-SNAPSHOT.jar
 
 ```
 
-docker build -t andrewmcrobinson/runner-jre-jar .
+docker build -v maven-repo:/root/.m2 -t andrewmcrobinson/runner-jre-jar .
 
 docker run -it andrewmcrobinson/runner-jre-jar
 
