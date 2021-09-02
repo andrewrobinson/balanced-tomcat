@@ -1,8 +1,14 @@
 https://hub.docker.com/_/maven
 https://hub.docker.com/_/tomcat
+https://hub.docker.com/_/alpine/
 
 Dockerfile.multistage
 https://github.com/carlossg/docker-maven
+
+
+https://snyk.io/wp-content/uploads/10-best-practices-to-containerize-Java-applications-with-Docker.pdf
+
+
 
 
 3.8.2-jdk-11, 3.8-jdk-11, 3-jdk-11, 3.8.2-openjdk-11, 3.8-openjdk-11, 3-openjdk-11
