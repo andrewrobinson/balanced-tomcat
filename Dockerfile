@@ -7,7 +7,22 @@ COPY . .
 RUN mvn -B -e -o -T 1C package -DskipTest
 
 
-FROM tomcat:8.0-alpine
+# This shows the manager. 404 at http://localhost:8080/session-servlet-1.0-SNAPSHOT/hello
+# but if manual deploy of war via manager it complains about class version
+# FROM tomcat:8.0-alpine
+
+#This one gives a stacktrace of java.lang.NoClassDefFoundError: javax/servlet/http/HttpServlet at:
+# http://localhost:8080/session-servlet-1.0-SNAPSHOT/hello
+# no manager etc
+# https://stackoverflow.com/questions/66711660/tomcat-10-x-throws-java-lang-noclassdeffounderror-on-javax-servlet-servletreques
+# FROM tomcat:10
+
+# This displays http://localhost:8080/session-servlet-1.0-SNAPSHOT/hello
+FROM tomcat:9
+RUN rm -f /usr/local/tomcat/conf/tomcat-users.xml
+COPY tomcat-users.xml /usr/local/tomcat/conf/
+
+
 # ADD sample.war /usr/local/tomcat/webapps/
 COPY --from=0 /usr/src/app/target/*.war /usr/local/tomcat/webapps
 # EXPOSE 8080

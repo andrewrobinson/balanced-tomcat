@@ -24,3 +24,4 @@ https://learning.oreilly.com/library/view/head-first-servlets/9780596516680/ch02
 
 https://www.geeksforgeeks.org/the-httpsession-interface-in-servlet/
 
+https://octopus.com/blog/deployable-tomcat-docker-containers
