@@ -1,4 +1,9 @@
 
+
+Sucky server.xml
+https://octopus.com/blog/defining-tomcat-context-paths
+
+
 http://trustmeiamadeveloper.com/2016/03/18/where-is-my-memory-java/
 
 https://snyk.io/wp-content/uploads/10-best-practices-to-containerize-Java-applications-with-Docker.pdf

@@ -21,31 +21,20 @@ dmvn clean install
 
 ```
 
-docker build -t andrewmcrobinson/runner-jre-war .
-docker run -it -p 8080:8080 andrewmcrobinson/runner-jre-war
+docker build -t andrewmcrobinson/tomcat-war .
+docker run -it -p 8080:8080 andrewmcrobinson/tomcat-war
 
+available via the .war file name massed in the Dockerfile:
 
-http://localhost:8080/manager/
-u:tomcat
-p:s3cret
+http://localhost:8080/session-servlet/hello
 
+also, due to my server.xml changes, available at:
+
+http://localhost:8080/session/hello
+
+with none of those, it would be avail at:
 
 http://localhost:8080/session-servlet-1.0-SNAPSHOT/hello
-
-
-sudo docker run \
-  --name tomcat \
-  -it \
-  -p 8080:8080 \
-  -v tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml \
-  -v context.xml:/tmp/context.xml \
-  tomcat:9.0 \
-  /bin/bash -c "mv /usr/local/tomcat/webapps /usr/local/tomcat/webapps2; mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps; cp /tmp/context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml; catalina.sh run"
-
-
-
-
-
 
 
 ```
@@ -53,23 +42,14 @@ sudo docker run \
 ### Sizes
 
 ```
-andrewmcrobinson/runner-jre-jar     274MB (a jre8 one was 85.6MB)
-maven 670MB
+andrewmcrobinson/tomcat-war     685MB
+maven                           670MB
 ```
 
 ### Questions
 
-mvn dependency:go-offline works ok, it caches deps unless the pom is updated
+where to rename the .war and how to set it up to run from /
 
-any dockerfile changes though and it all starts again
-
-I miss having the more global -v maven-repo:/root/.m2 that you got with the docker run -it approach
-
-That is larger than / external to docker image caching
-
-Is there a volume solution for a multi-stage dockerfile maven caching?
-
-But then do you want your docker image dependent on the local filesystem?
 
 ### Issues
 
