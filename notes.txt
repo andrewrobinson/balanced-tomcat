@@ -1,0 +1,15 @@
+[09:16] Pooja Jadhav
+FRAME is maven, tomcat ,jdk-11, svn
+[10:08] Pooja Jadhav
+    LDR is different project 
+​[10:13] Pooja Jadhav
+    it is like data reporting service
+​[10:14] Pooja Jadhav
+    Frame gets some data from different sources so LDR is one that provides it
+​[10:14] Pooja Jadhav
+    n frame process it
+
+    https://www.tutorialworks.com/concourse-java-pipeline/
+    https://quay.io/
+    https://github.com/GoogleContainerTools/jib
+
