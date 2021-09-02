@@ -18,3 +18,9 @@ https://docs.docker.com/engine/reference/commandline/volume_create/
 https://docs.docker.com/storage/volumes/
 
 alias dmvn='docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -v maven-repo:/root/.m2 -w /usr/src/mymaven maven:3.8.2-jdk-11 mvn'
+
+
+https://learning.oreilly.com/library/view/head-first-servlets/9780596516680/ch02s05.html
+
+https://www.geeksforgeeks.org/the-httpsession-interface-in-servlet/
+

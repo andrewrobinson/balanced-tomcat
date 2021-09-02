@@ -8,22 +8,22 @@ Branches achieve various goals on the way to that
 ## Running
 
 
+### Local build using a dockerised maven
+
+docker volume create --name maven-repo (only need to run once)
+
+alias dmvn='docker run -it --rm --name maven-builder -v "$(pwd)":/usr/src/mymaven -v maven-repo:/root/.m2 -w /usr/src/mymaven maven:3.8.2-jdk-11 mvn'
+
+dmvn clean install
+
+
 ### Multistage
 
 ```
 
-docker build -t andrewmcrobinson/runner-jre-jar .
-docker run -it andrewmcrobinson/runner-jre-jar
+docker build -t andrewmcrobinson/runner-jre-war .
+docker run -it -p 8080:8080 andrewmcrobinson/runner-jre-war
 
-or this one from a maven image maintainer (https://github.com/carlossg/docker-maven)
-
-docker build -t=andrewmcrobinson/runner-jre-jar2 -f=Dockerfile.multistage .
-docker run -it andrewmcrobinson/runner-jre-jar2
-
-NB without the CMD on the end of either, docker run gives you a shell when you run it
-and you could do a java -jar from there
-
-Which of the two do you prefer?
 
 ```
 
