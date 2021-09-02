@@ -16,14 +16,13 @@ docker build -t andrewmcrobinson/runner-jre-jar .
 
 docker run -it andrewmcrobinson/runner-jre-jar
 
-or
+or this one from a maven image maintainer (https://github.com/carlossg/docker-maven)
 
 docker build -t=andrewmcrobinson/runner-jre-jar2 -f=Dockerfile.multistage .
 docker run -it andrewmcrobinson/runner-jre-jar2
 
-NB without the CMD on the end of Dockerfile.multistage it gives you a shell when you run it
-and you could do a java -jar from there ....
-
+NB without the CMD on the end of either, docker run gives you a shell when you run it
+and you could do a java -jar from there
 
 Which of the two do you prefer?
 
