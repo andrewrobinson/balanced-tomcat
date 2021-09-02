@@ -13,7 +13,6 @@ Branches achieve various goals on the way to that
 ```
 
 docker build -t andrewmcrobinson/runner-jre-jar .
-
 docker run -it andrewmcrobinson/runner-jre-jar
 
 or this one from a maven image maintainer (https://github.com/carlossg/docker-maven)
@@ -31,7 +30,7 @@ Which of the two do you prefer?
 ### Sizes
 
 ```
-andrewmcrobinson/runner-jre-jar      85.6MB
+andrewmcrobinson/runner-jre-jar     274MB (a jre8 one was 85.6MB)
 maven 670MB
 ```
 
@@ -54,16 +53,3 @@ But then do you want your docker image dependent on the local filesystem?
 https://snyk.io/wp-content/uploads/10-best-practices-to-containerize-Java-applications-with-Docker.pdf
 
 5,6,7,8 need to be looked at
-
-
-<!-- 6. Properly handle events to safely
-terminate a Java application
-Docker creates processes—such as PID 1—and they must
-inherently handle process signals to function properly. This
-is why you should avoid any of these variations:
-• CMD “java” “-jar” “application.jar”
-• CMD “start-app.sh”
-Instead, use a lightweight init system, such as dumb-init,
-to properly initialize the Java process with signals support:
-• CMD “dumb-init” “java” “-jar”
- “application.jar” -->
