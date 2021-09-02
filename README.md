@@ -24,7 +24,7 @@ dmvn clean install
 docker build -t andrewmcrobinson/tomcat-war .
 docker run -it -p 8080:8080 andrewmcrobinson/tomcat-war
 
-available via the .war file name massed in the Dockerfile:
+available via the .war file name massaged in the Dockerfile:
 
 http://localhost:8080/session-servlet/hello
 
