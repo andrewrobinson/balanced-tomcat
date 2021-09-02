@@ -53,3 +53,14 @@ But then do you want your docker image dependent on the local filesystem?
 https://snyk.io/wp-content/uploads/10-best-practices-to-containerize-Java-applications-with-Docker.pdf
 
 5,6,7,8 need to be looked at
+
+
+### Which images from where?
+
+https://hub.docker.com/_/maven
+https://hub.docker.com/_/tomcat
+https://hub.docker.com/_/alpine/
+https://hub.docker.com/_/openjdk
+
+Seems like jre alpines stopped / got renamed
+Need guidance on which images from where
