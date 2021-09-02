@@ -12,7 +12,7 @@ Branches achieve various goals on the way to that
 
 ```
 
-docker build -v maven-repo:/root/.m2 -t andrewmcrobinson/runner-jre-jar .
+docker build -t andrewmcrobinson/runner-jre-jar .
 
 docker run -it andrewmcrobinson/runner-jre-jar
 
