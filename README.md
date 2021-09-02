@@ -42,4 +42,7 @@ docker run -it andrewmcrobinson/runner-jre-jar
 
 The build stage uses the published mymaven maven:3.8.2-jdk-11 directly. I didn't make it so there is no dockerfile here for it
 
-Dockerfile.multistage will become relevant hopefully
+Dockerfile currently runs openjdk:11.0.4-jre-slim
+
+
+Dockerfile.multistage will become relevant in the next branch hopefully
