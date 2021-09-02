@@ -19,42 +19,24 @@ docker run -it andrewmcrobinson/runner-jre-jar
 
 ```
 
-
-### Build using maven on docker
-
-```bash
-
-docker volume create --name maven-repo (only need to run once)
-
-alias dmvn='docker run -it --rm --name maven-builder -v "$(pwd)":/usr/src/mymaven -v maven-repo:/root/.m2 -w /usr/src/mymaven maven:3.8.2-jdk-11 mvn'
-
-dmvn clean install
+### Sizes
 
 ```
-
-### Run with local java
-
-```
-java -jar target/session-servlet-1.0-SNAPSHOT.jar
+andrewmcrobinson/runner-jre-jar      85.6MB
+maven 670MB
 ```
 
-### Run with a java docker image
+### Questions
 
-```
+mvn dependency:go-offline works ok, it caches deps unless the pom is updated
 
-docker build -v maven-repo:/root/.m2 -t andrewmcrobinson/runner-jre-jar .
+any dockerfile changes though and it all starts again
 
-docker run -it andrewmcrobinson/runner-jre-jar
+I miss having the more global -v maven-repo:/root/.m2 that you got with the docker run -it approach
 
+That is larger than / external to docker image caching
 
-```
+Is there a volume solution for a multi-stage dockerfile maven caching?
 
+But then do you want your docker image dependent on the local filesystem?
 
-### But which dockerfiles?
-
-The build stage uses the published mymaven maven:3.8.2-jdk-11 directly. I didn't make it so there is no dockerfile here for it
-
-Dockerfile currently runs openjdk:11.0.4-jre-slim
-
-
-Dockerfile.multistage will become relevant in the next branch hopefully
