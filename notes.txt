@@ -1,4 +1,10 @@
 
+https://github.com/jistol/docker-compose-nginx-tomcat-clustering-sample
+
+https://docs.nginx.com/nginx/deployment-guides/load-balance-third-party/apache-tomcat/
+
+https://github.com/nginxinc/kic-reference-architectures/tree/master/pulumi/aws
+
 
 https://github.com/Oreste-Luci/apache-tomcat-8.0.26-src/blob/master/java/org/apache/catalina/session/StandardSession.java
 
