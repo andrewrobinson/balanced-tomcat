@@ -1,5 +1,9 @@
 
 
+https://github.com/Oreste-Luci/apache-tomcat-8.0.26-src/blob/master/java/org/apache/catalina/session/StandardSession.java
+
+https://octopus.com/blog/defining-tomcat-context-paths
+
 Sucky server.xml
 https://octopus.com/blog/defining-tomcat-context-paths
 
