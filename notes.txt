@@ -1,5 +1,8 @@
 
 
+Nginx example
+https://github.com/jistol/docker-compose-nginx-tomcat-clustering-sample/blob/master/docker-compose.yml
+
 Sucky server.xml
 https://octopus.com/blog/defining-tomcat-context-paths
 
