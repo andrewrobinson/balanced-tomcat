@@ -1,4 +1,26 @@
 
+
+
+Quick Helm way?
+
+https://docs.bitnami.com/tutorials/deploy-java-application-kubernetes-helm/
+
+https://github.com/bitnami/charts/tree/master/bitnami/tomcat
+
+
+
+
+
+Word doc for LDR mentions:
+
+
+https://hub.docker.com/layers/tomcat/library/tomcat/9.0.52-jre11-openjdk-slim/images/sha256-0b368308fddfcc18defd3a2a439186c2f5a5303da40f76df19a4e038b040dfd5?context=explore
+
+
+
+https://play.google.com/books/reader?id=KdSrDQAAQBAJ&pg=GBS.PA98.w.8.0.4_71&hl=en_GB
+
+
 https://github.com/jistol/docker-compose-nginx-tomcat-clustering-sample
 
 https://docs.nginx.com/nginx/deployment-guides/load-balance-third-party/apache-tomcat/
