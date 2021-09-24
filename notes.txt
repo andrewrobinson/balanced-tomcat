@@ -1,5 +1,11 @@
 
 
+https://www.mulesoft.com/tcat/tomcat-classpath
+https://tomcat.apache.org/tomcat-9.0-doc/class-loader-howto.html
+
+
+Read tomcat docs
+https://tomcat.apache.org/tomcat-9.0-doc/class-loader-howto.html
 
 https://codefresh.io/howtos/using-docker-maven-maven-docker/
 https://github.com/kostis-codefresh/docker-maven-comparison
